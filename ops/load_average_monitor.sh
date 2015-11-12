@@ -7,7 +7,7 @@
 physical_cpu=`cat /proc/cpuinfo | grep "physical id"|sort|wc -l`
 load_average_15min=`uptime | awk "{print $12}"`
 let "value=load_average_15min/physical_cpu"
-if [ $value -gt 0.9 ]; then
+if [ $(echo "$value>=0.9"|bc) = 1 ]; then
 	echo "CPU负载超过90%."
 	mutt -s "CPU负载报警" 1373763906@qq.com `uptime`
 fi
