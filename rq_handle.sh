@@ -5,7 +5,7 @@
 #ref:http://python-rq.org/docs/monitoring/
 
 REDIS_DB=1
-REDIS_PASS='2015yunlianxiQAZWSX'
+REDIS_PASS='****'
 REDIS_PORT='6379'
 REDIS_HOST='localhost'
 REDIS_URL='redis://:'${REDIS_PASS}'@'${REDIS_HOST}':'${REDIS_PORT}'/'${REDIS_DB}
